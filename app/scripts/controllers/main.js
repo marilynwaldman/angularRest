@@ -8,7 +8,7 @@
  * Controller of the metalManiaApp
  */
 angular.module('metalManiaApp')
-  .controller('MainCtrl', function ($scope, Articles, $location, $http){
+  .controller('MainCtrl',[ '$scope', 'Articles', '$location', '$http', function ($scope, Articles, $location, $http){
 	
 	var url = 'https://api.github.com/search/repositories';	
 	
@@ -111,10 +111,5 @@ angular.module('metalManiaApp')
 	    $scope.articles.push(angular.copy($scope.article));
        }
 
-     
-
-
-   }).controller('FormCtrl', function($scope){
-	console.log("we have a contorller")
 	
-   });   
+   }]);   

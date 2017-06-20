@@ -1,6 +1,6 @@
 'use strict';
 angular.module('metalManiaApp')
-  .controller('ArticleCtrl', function ($scope, Articles, $routeParams) {
+  .controller('ArticleCtrl', ['$scope', 'Articles', '$routeParams', function ($scope, Articles, $routeParams) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -28,4 +28,4 @@ angular.module('metalManiaApp')
 	});
 	
 	
-})	
+}])	
