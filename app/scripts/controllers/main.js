@@ -8,7 +8,7 @@
  * Controller of the metalManiaApp
  */
 angular.module('metalManiaApp')
-  .controller('MainCtrl', function ($scope, $location, $http){
+  .controller('MainCtrl', function ($scope, Articles, $location, $http){
 	
 	var url = 'https://api.github.com/search/repositories';	
 	
@@ -33,8 +33,8 @@ angular.module('metalManiaApp')
 	});	
 	
 	
-       	$http.get('/articles.json')
-	  .then(function (response) {
+       
+	  Articles.load().then(function (response) {
 
 	    var data = response.data;
 	    var status = response.status;
@@ -48,7 +48,7 @@ angular.module('metalManiaApp')
 
 	    $scope.articles = data;
 	    console.log(data);
-	}, function errorCallback(response) {
+	  }, function errorCallback(response) {
 	    // called asynchronously if an error occurs
 	    console.log("Error: Could not get data", response.status);
 	

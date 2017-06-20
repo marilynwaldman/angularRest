@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "slug": "xx",
     "title": "Nightbringer",
     "image": "http:\/\/ia.media-imdb.com\/images\/M\/MV5BMTY1ODUzNzcxN15BMl5BanBnXkFtZTcwMjQ1MDUwOA@@._V1_SX640_SY720_.jpg",
@@ -11,7 +11,7 @@
     "author": "Marilyn Waldman"
   },
   {
-    "id": "2",
+    "id": 2,
     "slug": "xx",
     "title": "Mayhem",
     "image": "http:\/\/ia.media-imdb.com\/images\/M\/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX640_SY720_.jpg",
