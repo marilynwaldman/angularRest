@@ -8,7 +8,31 @@
  * Controller of the metalManiaApp
  */
 angular.module('metalManiaApp')
-  .controller('MainCtrl', function ($scope, $location, $http){	
+  .controller('MainCtrl', function ($scope, $location, $http){
+	
+	var url = 'https://api.github.com/search/repositories';	
+	
+	$http.get(url, { 
+	     params : {
+		q: 'moviemania',
+		sort: 'updated',
+		order: 'desc'
+ 	     }
+	  }).then(function (response) {
+
+	    var data = response.data;
+	    var status = response.status;
+	    var statusText = response.statusText;
+	    var headers = response.headers;
+	    var config = response.config;	    
+	    console.log(data, status);
+	}, function errorCallback(response) {
+	    // called asynchronously if an error occurs
+	    console.log("Error: Could not get data", response.status);
+
+	});	
+	
+	
        	$http.get('/articles.json')
 	  .then(function (response) {
 
